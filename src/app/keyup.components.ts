@@ -11,16 +11,17 @@ import { Component } from '@angular/core';
 export class KeyUpComponent_v1 {
   values = '';
 
-  /*
-  onKey(event: any) { // without type info
-    this.values += event.target.value + ' | ';
+  
+  onKey(event: KeyboardEvent) { // without type info
+    this.values += (<HTMLInputElement>event.target).value + ' | ';
   }
-  */
-
-  onKey(event: any) { // with type info
+/*   onKey(event: any) { // with type info
     // this.values += (<HTMLInputElement>event.target).value + ' | ';
-    this.values += event.target.value + ' | ';
-  }
+    // 显示当前输入框内的值
+    // this.values += event.target.value + ' | ';
+    // 显示每次输入的值
+    this.values += event.key + ' | ';
+  } */
 }
 
 //////////////////////////////////////////
